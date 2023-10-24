@@ -43,5 +43,5 @@ Collision.insert(15, "Rania", myTable);
 Collision.insert(16, "John", myTable);
 Collision.insert(21, "Mariam", myTable);
 		
-Collision.printData (myTable);
-Console.WriteLine("\nFind a user with id 21 "+Collision.findNode(21, myTable));
+// Collision.printData (myTable);
+// Console.WriteLine("\nFind a user with id 21 "+Collision.findNode(21, myTable));
