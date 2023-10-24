@@ -8,7 +8,7 @@ public class Collision_DoubleHashing
 		while (collision(index, myTable)==true) {
 			i++;//increment the i for the next interation if there is collision
 			index = hashFunction(key, i, myTable); //get the first hash with i incremented
-			index *= doubleHash (key); //get the second hash and product with the first hash
+			index += doubleHash (key); //get the second hash and product with the first hash
 			index %= myTable.Length; 
 			Console.WriteLine(i);
 			
