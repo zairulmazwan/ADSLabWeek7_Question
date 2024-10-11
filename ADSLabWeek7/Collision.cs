@@ -7,7 +7,7 @@ public class Collision
 		//DoublyLinkedList.Node n = new DoublyLinkedList.Node(key, name);
 		Node n = new Node(key, name);
 		
-		if (collision(index, myTable)==false) {
+		if (!collision(index, myTable)) {
 			dll.setHead(n);
 			myTable [index] = dll;
 		}
@@ -53,14 +53,22 @@ public class Collision
 		DoublyLinkedList n = myTable[index]; //the element in the table is of this class.
 		
 		if (n!=null) {
+
 			Node head = n.head; //get the node
-			
-			while (head.key != key && head.next !=null) {
-				head = head.next;
-				if(head.key == key) {
-					found = true;
-					break;
-				}	
+			if (head.key == key)
+			{
+				found = true;
+			}
+			else
+			{
+				while (head.key != key && head.next !=null) 
+				{
+					head = head.next;
+					if(head.key == key) {
+						found = true;
+						break;
+					}	
+				}
 			}
 		}
 		return found;
